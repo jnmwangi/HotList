@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Lilita+One&family=Port+Lligat+Slab&display=swap');
 
 :root{
     --primary-color: #131842;
+    --light-primary-color: #252a5c;
     --secondary-color: #E68369;
     --secondary-emphasis-color: #ECCEAE;
     --light-color:#FBF6E2;
@@ -17,7 +18,7 @@ body{
     padding: 0;
     height: 100dvh;
     font-size: 16px;
-    font-family: "Lilita", Arial, Helvetica, sans-serif;
+    font-family: "Hind Siliguri", Arial, Helvetica, sans-serif;
     background-image: url("./images/venice-8889871_640.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
@@ -37,7 +38,7 @@ aside{
     }
 
     ul{
-        margin-left: 50px;
+        margin-left: 20px;
     }
 
     li{
@@ -81,10 +82,10 @@ section > div:first-child{
 }
 
 .brand{
-    font-family: "Hind Siliguri", Arial, Helvetica, sans-serif;
+    font-family: "Lilita One", Arial, Helvetica, sans-serif;
     align-items: center;
-    justify-content: center;
     gap: 10px;
+    padding: 0 20px;
 }
 
 .categories li:nth-child(1){
@@ -94,6 +95,10 @@ section > div:first-child{
     button{
         margin-left: auto;
     }
+}
+
+.category{
+    margin-left: 30px;
 }
 
 .task-tools{
@@ -193,6 +198,10 @@ section > div:first-child{
 
     svg{
         color: white;
+    }
+
+    :hover{
+        background: var(--light-primary-color);
     }
 }
 
