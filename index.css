@@ -18,12 +18,17 @@ body{
     height: 100dvh;
     font-size: 16px;
     font-family: "Lilita", Arial, Helvetica, sans-serif;
+    background-image: url("./images/venice-8889871_640.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    align-items: stretch !important;
 }
 
 aside{
     background-color: var(--primary-color);
     color: var(--light-color);
-    width: 200px;
+    width: 250px;
 
     ul, li{
         list-style: none;
@@ -31,21 +36,31 @@ aside{
         margin: 0;
     }
 
+    ul{
+        margin-left: 50px;
+    }
+
     li{
         padding: 10px;
         cursor: pointer;
+    }
+
+    li.active{
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
     }
 
 }
 
 main{
     flex-grow: 1;
+    background-color: rgba(255, 255, 255, .8);
 }
 
 header{
     background-color: var(--secondary-color);
     align-items: center;
-    padding: 5px 20px;
+    padding: 5px 30px;
 }
 
 header h3{
@@ -61,11 +76,15 @@ header a{
 
 section > div:first-child{
     flex-grow: 1;
-    padding: 20px;
+    padding: 30px;
+    max-width: 600px;
 }
 
 .brand{
     font-family: "Hind Siliguri", Arial, Helvetica, sans-serif;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .categories li:nth-child(1){
@@ -78,9 +97,24 @@ section > div:first-child{
 }
 
 .task-tools{
+    align-items: center;
+    gap: 5px;
 
     form{
         margin-right: auto;
+        background-color: white;
+        display: flex;
+        box-shadow: 0 0 10px #c7c7c7;
+
+        input{
+            padding: 10px;
+            border: none;
+            margin: 0;
+        }
+
+        button{
+            border: none;
+        }
     }
 }
 
@@ -113,6 +147,7 @@ section > div:first-child{
         button{
             margin-left: auto;
             background-color: var(--secondary-color);
+            border-radius: 0 0 10px 0;
         }
     }
 }
@@ -131,15 +166,19 @@ section > div:first-child{
 }
 
 .btn{
-    padding: 5px 10px;
+    padding: 10px;
     border: 2px solid rgba(255,255,255,0);
     cursor: pointer;
     background: none;
     color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     svg{
-        width: 32px;
-        height: 32px;
+        width: 1em;
+        height: 1em;
     }
 }
 
@@ -155,4 +194,13 @@ section > div:first-child{
     svg{
         color: white;
     }
+}
+
+.add-task-btn svg{
+    width: 28px;
+    height: 28px;
+}
+
+.add-task-btn, .filter-tasks-btn{
+    border-radius: 5px;
 }
