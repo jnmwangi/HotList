@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Lilita+One&display=swap');
+
+:root{
+    --primary-color: #131842;
+    --secondary-color: #E68369;
+    --secondary-emphasis-color: #ECCEAE;
+    --light-color:#FBF6E2;
+    --background-color: #EFEFEF;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    font-size: 16px;
+    font-family: "Lilita", Arial, Helvetica, sans-serif;
+}
+
+aside{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    width: 200px;
+
+    ul, li{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li{
+        padding: 10px;
+        cursor: pointer;
+    }
+
+}
+
+main{
+    flex-grow: 1;
+}
+
+header{
+    background-color: var(--secondary-color);
+    align-items: center;
+    padding: 5px 20px;
+}
+
+header h3{
+    margin-right: auto;
+}
+
+header a{
+    display: inline-block;
+    padding: 10px;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+section > div:first-child{
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.brand{
+    font-family: "Hind Siliguri", Arial, Helvetica, sans-serif;
+}
+
+.categories li:nth-child(1){
+    align-items: center;
+    cursor: default;
+
+    button{
+        margin-left: auto;
+    }
+}
+
+.task-tools{
+
+    form{
+        margin-right: auto;
+    }
+}
+
+.task-card{
+    background-color: var(--secondary-emphasis-color);
+    box-shadow: 0 0 3px rgba(0,0,0,.4);
+    border-radius: 10px;
+    margin: 15px 0;
+
+    > div, > p{
+        padding: 5px 20px;
+    }
+    div:first-child{
+        align-items: center;
+    
+        button{
+            margin-left: auto;
+        }
+    }
+    
+    > div:last-child {
+        /* align-items: center; */
+        padding: 0;
+
+        span{
+            display: inline-block;
+            padding: 10px 20px;
+        }
+
+        button{
+            margin-left: auto;
+            background-color: var(--secondary-color);
+        }
+    }
+}
+
+.analytics{
+    width: 30%;
+}
+
+.row{
+    display: flex;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+.btn{
+    padding: 5px 10px;
+    border: 2px solid rgba(255,255,255,0);
+    cursor: pointer;
+    background: none;
+    color: var(--primary-color);
+
+    svg{
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.btn.btn-outlined{
+    border: 1px solid var(--primary-color);
+    background: white;
+}
+
+.btn.btn-primary-contained{
+    background: var(--primary-color);
+    color:white !important;
+
+    svg{
+        color: white;
+    }
+}

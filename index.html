@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotlist</title>
+    <link rel="stylesheet" href="./index.css" />
 </head>
-<body>
+
+<body class="row">
 
     <!-- aside  = Col 1 -->
-    <aside>
+    <aside class="col">
 
         <!-- row of col 1 -->
         <h2 class="brand">My HotList</h2>
 
         <ul class="categories">
-            <li>
+            <li class="row">
                 <h3>Categories</h3>
-                <button title="Add Category">Add Category</button>
+                <button title="Add Category" class="btn btn-primary-contained">
+                    <img src="icons/add-svgrepo-com.svg" width="32" />
+                </button>
             </li>
             <li class="category">Category 1</li>
             <li class="category">Category 1</li>
@@ -27,45 +32,56 @@
     </aside>
 
     <!-- main = Col 2 -->
-    <main>
+    <main class="col">
 
-        <header>
+        <header class="row">
             <h3>Category 2</h3>
 
             <a href="#">About</a>
             <a href="#">Sync</a>
         </header>
 
-        <section>
+        <section class="row">
 
             <div>
-                <div class="task-tools">
+                <div class="task-tools row">
                     <form>
                         <input type="text" placeholder="Type the task title" />
-                        <button>Search</button>
+                        <button class="btn"><img src="/icons/search-svgrepo-com.svg" width="16" /></button>
                     </form>
-                    <button type="button">Filter</button>
-                    <button type="button">Add Task</button>
+                    <button type="button" class="btn">
+                        <img src="./icons/filter-svgrepo-com.svg" width="16" />
+                    </button>
+                    <button type="button" class="btn btn-primary-contained">
+                        <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M11.25 12.75V18H12.75V12.75H18V11.25H12.75V6H11.25V11.25H6V12.75H11.25Z"
+                                fill="#FBF6E2" />
+                        </svg>
+                    </button>
                 </div>
 
                 <div id="tasks">
 
                     <div class="task-card">
-                        <div>
+                        <div class="row">
                             <h5>Task Title</h5>
-                            <button>Close</button>
+                            <button class="btn">
+                                <img src="icons/close-md-svgrepo-com.svg" width="16" />
+                            </button>
                         </div>
                         <p>Description</p>
-                        <div>
+                        <div class="row">
                             <span>Deadline: 28/07/2024</span>
-                            <button>Mark as done</button>
+                            <button class="btn">Mark as done</button>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <div>
+            <div class="analytics">
                 <h4>Analytics</h4>
 
             </div>
@@ -73,6 +89,7 @@
         </section>
 
     </main>
-    
+
 </body>
+
 </html>
