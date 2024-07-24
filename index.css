@@ -44,6 +44,10 @@ aside{
     li{
         padding: 10px;
         cursor: pointer;
+
+        :hover{
+            background-color: #252a5c;
+        }
     }
 
     li.active{
@@ -212,4 +216,35 @@ section > div:first-child{
 
 .add-task-btn, .filter-tasks-btn{
     border-radius: 5px;
+}
+
+.menuIcon{
+    display: none;
+}
+
+@media (max-width:720px) {
+    section{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:570px) {
+    aside{
+        display: none !important;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+    }
+
+    .menuIcon{
+        display: inline-block;
+    }
+
+    .task-tools{
+        position: fixed;
+        top: calc(100dvh - 50px);
+        left: 0;
+        align-items: center;
+    }
 }
