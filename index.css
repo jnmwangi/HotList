@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Lilita+One&family=Port+Lligat+Slab&display=swap');
 
-:root{
+:root {
     --primary-color: #131842;
     --light-primary-color: #252a5c;
     --secondary-color: #E68369;
     --secondary-emphasis-color: #ECCEAE;
-    --light-color:#FBF6E2;
+    --light-color: #FBF6E2;
     --background-color: #EFEFEF;
+    --danger: rgb(255, 122, 122);
+    --success: rgb(155, 245, 155);
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     height: 100dvh;
@@ -26,134 +28,136 @@ body{
     align-items: stretch !important;
 }
 
-aside{
+aside {
     background-color: var(--primary-color);
     color: var(--light-color);
     width: 250px;
 
-    ul, li{
+    ul,
+    li {
         list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    ul{
+    ul {
         margin-left: 20px;
     }
 
-    li{
+    li {
         padding: 10px;
         cursor: pointer;
 
-        :hover{
+        :hover {
             background-color: #252a5c;
         }
     }
 
-    li.active{
+    li.active {
         background-color: var(--secondary-color);
         color: var(--primary-color);
     }
 
 }
 
-main{
+main {
     flex-grow: 1;
     background-color: rgba(255, 255, 255, .8);
 }
 
-header{
+header {
     background-color: var(--secondary-color);
     align-items: center;
     padding: 5px 30px;
 }
 
-header h3{
+header h3 {
     margin-right: auto;
 }
 
-header a{
+header a {
     display: inline-block;
     padding: 10px;
     color: var(--primary-color);
     text-decoration: none;
 }
 
-section > div:first-child{
+section>div:first-child {
     flex-grow: 1;
     padding: 30px;
     max-width: 600px;
 }
 
-.brand{
+.brand {
     font-family: "Lilita One", Arial, Helvetica, sans-serif;
     align-items: center;
     gap: 10px;
     padding: 0 20px;
 }
 
-.categories li:nth-child(1){
+.categories li:nth-child(1) {
     align-items: center;
     cursor: default;
 
-    button{
+    button {
         margin-left: auto;
     }
 }
 
-.category{
+.category {
     margin-left: 30px;
 }
 
-.task-tools{
+.task-tools {
     align-items: center;
     gap: 5px;
 
-    form{
+    form {
         margin-right: auto;
         background-color: white;
         display: flex;
         box-shadow: 0 0 10px #c7c7c7;
 
-        input{
+        input {
             padding: 10px;
             border: none;
             margin: 0;
         }
 
-        button{
+        button {
             border: none;
         }
     }
 }
 
-.task-card{
-    background-color: var(--secondary-emphasis-color);
-    box-shadow: 0 0 3px rgba(0,0,0,.4);
+.task-card {
+    box-shadow: 0 0 3px rgba(0, 0, 0, .4);
     border-radius: 10px;
     margin: 15px 0;
 
-    > div, > p{
+    >div,
+    >p {
         padding: 5px 20px;
     }
-    div:first-child{
+
+    div:first-child {
         align-items: center;
-    
-        button{
+
+        button {
             margin-left: auto;
         }
     }
-    
-    > div:last-child {
+
+    >div:last-child {
         /* align-items: center; */
         padding: 0;
 
-        span{
+        span {
             display: inline-block;
             padding: 10px 20px;
         }
 
-        button{
+        button {
             margin-left: auto;
             background-color: var(--secondary-color);
             border-radius: 0 0 10px 0;
@@ -161,22 +165,34 @@ section > div:first-child{
     }
 }
 
-.analytics{
+.task-card.pending-task {
+    background-color: var(--secondary-emphasis-color);
+}
+
+.task-card.overdue-task {
+    background-color: var(--danger);
+}
+
+.task-card.complete-task {
+    background-color: var(--success);
+}
+
+.analytics {
     width: 30%;
 }
 
-.row{
+.row {
     display: flex;
 }
 
-.col{
+.col {
     display: flex;
     flex-direction: column;
 }
 
-.btn{
+.btn {
     padding: 10px;
-    border: 2px solid rgba(255,255,255,0);
+    border: 2px solid rgba(255, 255, 255, 0);
     cursor: pointer;
     background: none;
     color: var(--primary-color);
@@ -185,51 +201,91 @@ section > div:first-child{
     align-items: center;
     justify-content: center;
 
-    svg{
+    svg {
         width: 1em;
         height: 1em;
     }
 }
 
-.btn.btn-outlined{
+.btn.btn-outlined {
     border: 1px solid var(--primary-color);
     background: white;
 }
 
-.btn.btn-primary-contained{
+.btn.btn-primary-contained {
     background: var(--primary-color);
-    color:white !important;
+    color: white !important;
 
-    svg{
+    svg {
         color: white;
     }
 
-    :hover{
+    :hover {
         background: var(--light-primary-color);
     }
 }
 
-.add-task-btn svg{
+.add-task-btn svg {
     width: 28px;
     height: 28px;
 }
 
-.add-task-btn, .filter-tasks-btn{
+.add-task-btn,
+.filter-tasks-btn {
     border-radius: 5px;
 }
 
-.menuIcon{
+.menuIcon {
     display: none;
 }
 
+dialog {
+    padding: 0;
+    border: none;
+    box-shadow: 0 0 5px #747474;
+    min-width: 350px;
+
+    .dialogTitle {
+        padding: 10px;
+        background-color: gray;
+        align-items: center;
+
+        h3 {
+            margin: 0;
+        }
+
+        button {
+            margin-left: auto;
+        }
+    }
+
+    form{
+        padding: 10px;
+
+        > div{
+            margin-bottom: 10px;
+        }
+
+        label{
+            display: block;
+        }
+
+        input, textarea{
+            padding: 10px;
+            border: 1px solid rgb(173, 173, 173);
+            width: 100%;
+        }
+    }
+}
+
 @media (max-width:720px) {
-    section{
+    section {
         flex-direction: column;
     }
 }
 
 @media (max-width:570px) {
-    aside{
+    aside {
         display: none !important;
         position: fixed;
         left: 0;
@@ -237,11 +293,11 @@ section > div:first-child{
         height: 100%;
     }
 
-    .menuIcon{
+    .menuIcon {
         display: inline-block;
     }
 
-    .task-tools{
+    .task-tools {
         position: fixed;
         top: calc(100dvh - 50px);
         left: 0;

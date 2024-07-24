@@ -21,5 +21,46 @@
       "banner": "sdfsdf"
     }
   ],
-  "tasks": []
+  "tasks": [
+    {
+      "id": 2,
+      "title": "sdfsd",
+      "description": "sdfsdf",
+      "deadline": "2024-07-24T23:50",
+      "status": "complete",
+      "categoryId": 3
+    },
+    {
+      "id": 3,
+      "title": "sdf",
+      "description": "sdf",
+      "deadline": "2024-07-24T23:51",
+      "status": "pending",
+      "categoryId": 2
+    },
+    {
+      "id": 5,
+      "title": "This task",
+      "description": "asdf asdf a",
+      "deadline": "2024-07-31T00:18",
+      "status": "pending",
+      "categoryId": 1
+    },
+    {
+      "id": 6,
+      "title": "bmnmbn",
+      "description": "bnmbnm",
+      "deadline": "2024-07-27T00:28",
+      "status": "pending",
+      "categoryId": 2
+    },
+    {
+      "id": 9,
+      "title": "Cool",
+      "description": "lskdjflk",
+      "deadline": "2024-07-31T00:36",
+      "status": "complete",
+      "categoryId": 1
+    }
+  ]
 }

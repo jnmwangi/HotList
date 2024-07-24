@@ -4,7 +4,7 @@
     Categories: id, name, banner
 */
 
-const Task = function (title, description, deadline, status, categoryId, id = null) {
+const Task = function (title, description, deadline, categoryId, status="pending", id = null) {
     return {
         id,
         title,
@@ -64,16 +64,16 @@ function readAll(endpoint){
     }).then( handleResponse );
 }
 
-function readOne(endpoint, id){
+function readOne(endpoint){
 
-    return fetch(`${BASEURL}${endpoint}/${id}`, {
+    return fetch(`${BASEURL}${endpoint}`, {
         headers:{
             "Content-Type": "application/json"
         }
     }).then( handleResponse );
 }
 
-function update(endpoint, id){
+function update(endpoint, id, data){
     return fetch(`${BASEURL}${endpoint}/${id}`, {
         method: 'PATCH',
         body: JSON.stringify(data),
