@@ -29,6 +29,8 @@ function categoryItem(category) {
     li.id = category.id;
     li.innerText = category.name;
     li.addEventListener("click", () => {
+        categoriesListEl.querySelectorAll('li').forEach(l=>l.classList.remove("active"))
+        li.classList.add("active")
         readOne(`/categories/${category.id}?_embed=tasks`, category.id).then(selectCategory);
     });
     return li;
