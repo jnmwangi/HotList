@@ -12,6 +12,8 @@ const categoriesListEl = document.querySelector("#categories");
 const taskTmpl = document.querySelector("#taskTempl").content;
 const tasksList = document.querySelector("#tasks");
 
+document.querySelectorAll(".menuIcon").forEach(b=>b.addEventListener("click", toggleAside));
+
 let selectedCategory;
 
 function toggleDialog(dialog) {
@@ -21,6 +23,11 @@ function toggleDialog(dialog) {
     else {
         dialog.showModal();
     }
+}
+
+function toggleAside(){
+    const aside = document.querySelector("aside");
+    aside.style.display = aside.style.display === "none" ? "" : "none";
 }
 
 function categoryItem(category) {
