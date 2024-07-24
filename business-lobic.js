@@ -37,7 +37,7 @@ const Category = function(name, banner, id=null){
  *  */ 
 
 
-const BASEURL = "http://localhost:4000";
+const BASEURL = "https://my-json-server.typicode.com/njmwasmoringa/HotList";
 
 function handleResponse(response){
     if( response.status < 200 || response.status > 299 ){
