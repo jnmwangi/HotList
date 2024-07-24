@@ -151,4 +151,8 @@ taskForm.addEventListener("submit", evt => {
         selectedCategory.tasks.push(newTask);
         selectCategory(selectedCategory);
     })
-})
+});
+
+if(window.innerWidth <= 570){
+    document.querySelector("aside").style.display = "none";
+}
