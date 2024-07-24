@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotlist</title>
     <link rel="stylesheet" href="./index.css" />
+    
+    <script src="business-lobic.js"></script>
 </head>
 
 <body class="row">
@@ -19,10 +21,10 @@
             <h2 class="">My HotList</h2>
         </div>
 
-        <ul class="categories">
+        <ul class="categories" id="categories">
             <li class="row">
                 <h3>Categories</h3>
-                <button title="Add Category" class="btn btn-primary-contained add-task-btn">
+                <button title="Add Category" class="btn btn-primary-contained add-task-btn" id="addCategoryBtn">
                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -31,10 +33,6 @@
                         </svg>
                 </button>
             </li>
-            <li class="category">Category 1</li>
-            <li class="category active">Category 2</li>
-            <li class="category">Category 3</li>
-            <li class="category">Category 4</li>
         </ul>
 
     </aside>
@@ -116,6 +114,31 @@
         </section>
 
     </main>
+
+    <dialog id="categoryDialog">
+        <form>
+            <div>
+                <button type="button">Close</button>
+            </div>
+            <div>
+                <label for="categoryName">Category Name</label>
+                <input name="name" id="categoryName" type="text" required />
+            </div>
+            
+            <div>
+                <label for="banner">Banner</label>
+                <input name="banner" id="banner" type="text" />
+            </div>
+
+            <div>
+                <button>Submit Category</button>
+            </div>
+        </form>
+    </dialog>
+
+    
+    
+    <script src="ui.js"></script>
 
 </body>
 
