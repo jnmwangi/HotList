@@ -10,6 +10,15 @@ function categoryItem(category){
     return `<li class="category" id="${category.id}">${category.name}</li>`;
 }
 
+function loadCategories(){
+    readAll("/categories").then(categories=>{
+        categories.forEach(category=>{
+            categoriesListEl.innerHTML += categoryItem(category);
+        });
+    });
+}
+loadCategories();
+
 
 closeCategoryDialog.addEventListener("click", ()=>{
     categoryDialog.close();
@@ -30,8 +39,11 @@ categoryForm.addEventListener("submit", (evt)=>{
     const banner = categoryForm.banner.value;
     const category = Category(categoryName, banner);
 
-    categoriesListEl.innerHTML += categoryItem(category);
-    categoryForm.reset();
-    closeCategoryDialog.click();
+    create('/categories', category).then(newCategory=>{
+        category.id = newCategory.id;
+        categoriesListEl.innerHTML += categoryItem(category);
+        categoryForm.reset();
+        closeCategoryDialog.click();
+    });
 
 });
